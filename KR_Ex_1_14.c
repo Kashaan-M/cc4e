@@ -8,6 +8,10 @@ while(there is another line)
     save it and its length
 print longest line
 */
+/*
+Exercise 1-14. Revise the main routine of the longest-line program so it will correctly print the length of arbitrarily long input lines, and as much as possible of the text.
+*/
+
 #define MAXLINE 1000 /* maximum input line size */
 int main() { /* find longest line*/
 
