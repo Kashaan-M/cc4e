@@ -12,6 +12,7 @@ Check KR_Ex_1_15.c for the complete program to get of this for loop.
 int main() {
     char s[MAXLINE];
     int c, i;
+    true 
     int lim = MAXLINE;
     /*
     for (i=0; i<lim-1 && (c=getchar()) != '\n' && c != EOF; ++i)
