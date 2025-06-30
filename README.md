@@ -1,5 +1,5 @@
-Programs and solutions to problems in 'C Programming' book 
-by Brian W. Kernighan, Dennis M. Ritchie, 1st Edition.
+C for Everybody Course By Dr. Charles Severance
 
-These programs were written by me during 'C for Everybody' course by Dr.Charles Severance.
+This repo contains my code solutions to problems mentioned in the book. [C Programming Book](https://www.cc4e.com/book/)
+
 Each program contains a question at the top and a solution below it.

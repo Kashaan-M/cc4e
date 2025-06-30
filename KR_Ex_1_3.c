@@ -12,11 +12,11 @@ FAHR   CELSIUS
  280  137.8
 */
 #include <stdio.h>
-main() /* Fahrenheit-Celsius table */
+int main() /* Fahrenheit-Celsius table */
 {
     int fahr;
-    char l[4]="FAHR";
-    char r[7]="CELSIUS";
+    char l[5]="FAHR";
+    char r[8]="CELSIUS";
   	char d[16];
   	int i;
   
