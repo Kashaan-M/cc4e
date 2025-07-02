@@ -3,6 +3,6 @@
 .fuse*
 *.jpeg
 *.jpg
-./slides/*
+/slides/*
 *.bkp
 *.drawio
