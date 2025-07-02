@@ -1,7 +1,8 @@
-*.png
 *.o
 *.out
 .fuse*
 *.jpeg
 *.jpg
 ./slides/*
+*.bkp
+*.drawio

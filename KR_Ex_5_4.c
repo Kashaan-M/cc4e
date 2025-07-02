@@ -30,6 +30,7 @@ char *s1, *s2;
 {
     int i;
     i = 0;
+    
     while((s2[i] = s1[i]) != '\0')
         i++;
     return(s2);

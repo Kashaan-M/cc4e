@@ -22,7 +22,6 @@ point to the next free area. free(p) merely sets allocp to p if p is inside allo
 */
 
 #include<stdio.h>
-#define NULL 0 /* pointer value for error report */
 #define ALLOCSIZE 1000 /* size of available space */
 
 static char allocbuf[ALLOCSIZE]; /* storage for alloc */
@@ -31,7 +30,7 @@ static char *allocp = allocbuf; /* next free position */
 static char *allocp = &allocbuf[0];
 since the array name is the address of the zeroth element */
 
-char *alloc(n) /* return pointer to n characters */
+extern void *alloc(n) /* return pointer to n characters */
 int n;
 {
     if(allocp + n <= allocbuf + ALLOCSIZE) { /* fits */
@@ -49,17 +48,9 @@ value for a pointer. In general, integers cannot meaningfully be assigned to poi
         return(NULL);
 }
 
-free(p) /* free storage pointed to by p */
+extern void free(p) /* free storage pointed to by p */
 char *p;
 {
     if(p >= allocbuf && p < allocbuf + ALLOCSIZE)
         allocp = p;
-}
-#include<string.h>
-int main() {
-    int c;
-
-    while((c=getchar()) != EOF) {
-        putchar(c);
-    }
 }
