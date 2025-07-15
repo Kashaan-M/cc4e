@@ -1,12 +1,12 @@
 #include<stdio.h>
+#include<string.h>
 
 int main() {
-char ca[10], *cp;
-int ia[10], *ip;
+char name[10] = {'a','b','c','d','e','f','g','h','i','j','k'};
+int i;
 
-cp  = ca + 1;
-ip = ia + 1;
-printf("ca %p cp %p\n", ca, cp);
-printf("ia %p ip %p\n", ia, ip);
+printf("strlen(name)%ld sizeof(name)%ld",strlen(name),sizeof(name));
+for(i=0; i < 2000; i++)
+    printf("%d",name[i]);
 
 }

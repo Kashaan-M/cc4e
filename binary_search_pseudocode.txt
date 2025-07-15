@@ -1,0 +1,40 @@
+binary(x,v,n) v[], x is the number to find index of,or the number to find, n is no of items in v[]
+
+let low is 0 and high is last item of v[] i.e. v[n-1]
+let middle value be the arithmetic mean of low and high mid = (low+high)/2
+
+while low value is less than equal to high
+  if x value less than v[mid] that means x lies to the left from center value of v[]
+  then low is low and high is going to be mid i.e. high = mid
+  else if x value is higher than v[mid] that means x lies to the right from center value of v[]
+  then change the lower to middle value and keep the high as it is i.e. low = mid
+  else if the only option left is x equals to v[mid]
+  then return mid
+  
+ if the loop fails to return mid then return -1 which indicates x or the index of x doesn't exists in v[]
+ 
+ let v = [1,2,3,4,5,6,7,8,9,10]
+ 
+ let x = 7
+ n = 10
+ 
+ iter 1:
+ low = 0
+ high = 9
+ mid = 4
+ 7 > v[4]=5 so
+ iter 2:
+ low = 4+1 = 5
+ high = 9
+ mid = 7
+ 7 < v[7]=8
+ iter 3:
+ low = 5
+ high = 7 - 1 = 6
+ mid = 5
+ 7 > v[5]=6
+ iter 4:
+ low = 5+1
+ high = 6
+ mid = 6
+ 7 == v[6]=7 so return mid i.e. index of x in v is 6 and x is 7
