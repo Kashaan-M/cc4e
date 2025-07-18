@@ -56,8 +56,10 @@ void pystr_append(struct Pystr* self, char ch)
 void pystr_appends(struct Pystr* self, char *newdata)
 {   
     int i = 0;
-    while(i++ < strlen(newdata)-1)
+    while(i < strlen(newdata)) {
         pystr_append(self, newdata[i]);
+        i++;
+    }
 }
 /* x = "hello" */
 void pystr_assign(struct Pystr* self, char *new)
@@ -66,7 +68,7 @@ void pystr_assign(struct Pystr* self, char *new)
     self->length = 0;
     self->alloc = 10;
     self->data[0] = '\0';
-    for(i=0; i < strlen(new) - 1; i++) {
+    for(i=0; i < strlen(new); i++) {
         pystr_append(self,new[i]);
     }
 }
