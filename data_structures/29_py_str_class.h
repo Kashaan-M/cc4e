@@ -1,17 +1,3 @@
-/* Copyright (c) Kashaan Mahmood */
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-#define MAXVAL 1000
-
-/* Attempted Implementation of Python-like string object 
-
-x = str()
-x = x + 'H'
-x = x + "ello World."
-x = "Thanks for the offer.";
-*/
-
 struct Pystr {
     int length;
     int alloc; /* the length of data */
@@ -91,25 +77,4 @@ void pystr_del(const struct Pystr* self)
 {
     free((void *)self->data); /* free string first */
     free((void *)self);
-}
-int main(){
-    struct Pystr* p  = pystr_new();
-    pystr_dump(p);
-    pystr_append(p,'H');
-    pystr_append(p,'e');
-    pystr_append(p,'l');
-    pystr_append(p,'l');
-    pystr_append(p,'o');
-    pystr_append(p,' ');
-    pystr_append(p,'W');
-    pystr_append(p,'o');
-    pystr_append(p,'r');
-    pystr_append(p,'l');
-    pystr_append(p,'d');
-    pystr_append(p,'.');
-    pystr_dump(p);
-    pystr_appends(p," Welcome to C programming");
-    pystr_dump(p);
-    pystr_assign(p,"Thanks. I am not sure I want to learn it...");
-    pystr_dump(p);
 }
